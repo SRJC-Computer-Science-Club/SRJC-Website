@@ -1,17 +1,25 @@
 import { fromJS } from 'immutable';
-import { DO_SOMETHINGS } from '../constants/constants';
 import { handleActions } from 'redux-actions';
+import { default as Action, TypeKeys } from "../constants/constants";
+import { DataActions } from "../actions/DataActions";
 
 const initialState = fromJS({});
 
 
-const DATA_REDUCER = handleActions({
+const DataReducer = handleActions({
 
-	[DO_SOMETHINGS]: (state, action) => {
-		return state;
+	[TypeKeys.DO_SOMETHING]: (state, action: Action<DataActions>) => {
+		console.log(action.type)
+		return state
+	},
+	[TypeKeys.DO_NOTHING] : (state, action: Action<DataActions>) => {
+		console.log(action.type)
+		return state
 	}
 
-},                                 initialState);
+
+},                                initialState);
 
 
-export default DATA_REDUCER;
+export default DataReducer;
+

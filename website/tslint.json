@@ -26,16 +26,6 @@
         "no-any": true,
         "no-arg": true,
         "no-bitwise": true,
-        "no-console": [
-            true,
-            "log",
-            "error",
-            "debug",
-            "info",
-            "time",
-            "timeEnd",
-            "trace"
-        ],
         "no-construct": true,
         "no-debugger": true,
         "no-duplicate-variable": true,
@@ -54,9 +44,7 @@
             "check-open-brace",
             "check-whitespace"
         ],
-        "quotemark": [true, "single", "jsx-double"],
         "radix": true,
-        "semicolon": [true, "always"],
         "switch-default": true,
 
         "trailing-comma": [false],
